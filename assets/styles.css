@@ -386,3 +386,8 @@ textarea{min-height:140px;resize:vertical}
 .next-book strong{display:block;font-family:var(--serif);font-size:1.6rem;margin:6px 0}
 .next-book span:last-child{color:var(--muted);font-style:italic;font-family:var(--serif)}
 .teaser-shelf .bk-flag{font-size:5cqw}
+.toc-head{font-family:var(--serif);font-size:1.5rem;margin-top:30px;display:flex;align-items:center;gap:10px}
+.book-toc{list-style:none;padding:0;margin:0;border-top:2px solid var(--ink)}
+.book-toc li{padding:12px 0;border-bottom:1px solid var(--line);font-family:var(--serif);font-size:1.08rem}
+.book-toc .ch{display:inline-block;min-width:96px;font-family:var(--font);font-size:.74rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--coral-d)}
+.bk-flag{top:0;bottom:auto;border-top-left-radius:0;border-bottom-left-radius:8px}.bk-link{padding:26px 14% 8px}

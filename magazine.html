@@ -29,15 +29,16 @@
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
     </button>
-    <ul class="nav-links" id="nav-links"><li><a href="philosophy.html">Philosophy</a></li><li><a href="courses.html">Courses</a></li><li><a href="coaching.html">Coaching</a></li><li><a href="ai-agents.html">AI Agents</a></li><li><a href="magazine.html" aria-current="page">Magazine</a></li><li><a href="resources.html">Resources</a></li><li><a href="enterprise.html">Enterprise</a></li><li><a href="pricing.html">Pricing</a></li><li><a class="btn btn-primary" href="pricing.html#membership">Become a member</a></li></ul>
+    <ul class="nav-links" id="nav-links"><li><a href="philosophy.html">Philosophy</a></li><li><a href="courses.html">Courses</a></li><li><a href="coaching.html">Coaching</a></li><li><a href="ai-agents.html">AI Agents</a></li><li><a href="magazine.html" aria-current="page">Magazine</a></li><li><a href="books.html">Books</a></li><li><a href="resources.html">Resources</a></li><li><a href="enterprise.html">Enterprise</a></li><li><a href="pricing.html">Pricing</a></li><li><a class="btn btn-primary" href="pricing.html#membership">Become a member</a></li></ul>
   </nav>
 </header>
 <main id="main">
 
+<!-- PLACEHOLDER CHECKOUT: every element with data-checkout="..." is a placeholder. Before launch, swap each href for a real Stripe Payment Link, Gumroad or Lemon Squeezy checkout URL (keyed by the data-checkout value). Until then the buttons only open a 'Checkout coming soon' notice. No payment is taken. -->
 <section class="hero"><div class="wrap hero-grid">
   <div><span class="kicker">ScaledLearning Magazine</span><h1 class="display">An awesome magazine. <span class="hl">Every month.</span></h1>
   <p class="lead">A premium monthly issue on agility at scale, scalable learning and agentic AI. Big ideas, practical field guides, and the best of what our members have learned. Included with every membership.</p>
-  <div class="btn-row"><a class="btn btn-primary" href="#subscribe">Subscribe</a><a class="btn btn-outline-light" href="#inside">Look inside Issue 01</a></div></div>
+  <div class="btn-row"><a class="btn btn-primary" href="#checkout-coming-soon" data-checkout="magazine-annual">Subscribe for a year: $120</a><a class="btn btn-outline-light" href="#checkout-coming-soon" data-checkout="magazine-single">Buy this issue: $9</a></div><p class="small" style="color:#d6cdfa;margin-top:12px">Example pricing. Checkout coming soon. <a href="#inside" style="color:#ffb627">Look inside Issue 01</a></p></div>
   <div><div class="mag-stage"><div class="mag-back" aria-hidden="true"></div><div class="mag-cover " role="img" aria-label="Example magazine cover: ScaledLearning Magazine, Issue 01, The Knowledge Loop: Capture What Your Teams Learn">
   <div class="mag-badge">Example</div>
   <div class="mag-top"><span>Issue 01</span><span>Example issue</span></div>
@@ -97,11 +98,16 @@
   
 </div><figcaption>Issue 04 (example)<span>In-the-workflow learning</span></figcaption></figure></div></div></section>
 <section id="subscribe"><div class="wrap">
-  <div class="section-head center"><span class="kicker">Subscribe</span><h2 class="display">Choose how you read</h2><p class="lead">Start free with the weekly Brief, or go all in with the monthly magazine. The magazine is also included in every membership.</p></div>
-  <div class="grid g4">
-    <article class="tier" style="position:relative"><h3>Scaled Learning Brief</h3><p><span class="amount">$0<small></small></span></p><p class="meta">Free newsletter</p><p><span class="example-chip">Example pricing</span></p><ul class="check"><li>Weekly email: one insight, one tool, one AI tip</li><li>Previews of each magazine issue</li><li>Selected free articles</li></ul><a class="btn btn-ghost" href="#newsletter">Get the Brief</a></article>
-    <article class="tier featured" style="position:relative"><span class="ribbon">Most popular</span><h3>Digital</h3><p><span class="amount">$12<small>/mo</small></span></p><p class="meta">or $120/year</p><p><span class="example-chip">Example pricing</span></p><ul class="check"><li>Every monthly issue (web, PDF, ePub)</li><li>Full back-issue archive</li><li>Subscriber-only field guides</li></ul><a class="btn btn-primary" href="pricing.html">Subscribe</a></article>
-    <article class="tier" style="position:relative"><h3>Digital + Print</h3><p><span class="amount">+$80<small>/yr</small></span></p><p class="meta">Optional print add-on</p><p><span class="example-chip">Example pricing</span></p><ul class="check"><li>Everything in Digital</li><li>Quarterly printed best-of issue</li><li>Mailed to your door (where available)</li></ul><a class="btn btn-ghost" href="pricing.html">Add print</a></article>
+  <div class="section-head center"><span class="kicker">Buy or subscribe</span><h2 class="display">Choose how you read</h2><p class="lead">Buy a single issue, subscribe monthly, or save with a year. The magazine is also included in every membership.</p></div>
+  <div class="buy-options">
+    <article class="tier" style="position:relative"><h3>Buy this issue</h3><p><span class="amount">$9<small></small></span></p><p class="meta">Single issue</p><p><span class="example-chip">Example pricing</span></p><ul class="check"><li>Issue 01: The Knowledge Loop (example)</li><li>Web, PDF and ePub</li><li>Yours to keep</li></ul><a class="btn btn-ghost" href="#checkout-coming-soon" data-checkout="magazine-single">Buy this issue</a></article>
+    <article class="tier featured" style="position:relative"><span class="ribbon">Best value</span><h3>Subscribe for a year</h3><p><span class="amount">$120<small>/yr</small></span></p><p class="meta">Annual digital subscription</p><p><span class="example-chip">Example pricing</span></p><ul class="check"><li>12 monthly issues</li><li>Full back-issue archive</li><li>Subscriber-only field guides</li><li>Save vs. monthly</li></ul><a class="btn btn-primary" href="#checkout-coming-soon" data-checkout="magazine-annual">Subscribe for a year</a></article>
+    <article class="tier" style="position:relative"><h3>Monthly</h3><p><span class="amount">$12<small>/mo</small></span></p><p class="meta">Monthly digital subscription</p><p><span class="example-chip">Example pricing</span></p><ul class="check"><li>Every monthly issue (web, PDF, ePub)</li><li>Full back-issue archive</li><li>Cancel anytime (placeholder terms)</li></ul><a class="btn btn-ghost" href="#checkout-coming-soon" data-checkout="magazine-monthly">Subscribe monthly</a></article>
+  </div>
+  <div id="checkout-coming-soon" class="placeholder-note mt" role="note"><strong>Checkout coming soon.</strong> This example site doesn't take payments yet. Purchase buttons are placeholders and will be connected to a secure checkout provider before launch. No payment is taken and no data is collected.</div>
+  <div class="grid g3 mt" style="margin-top:36px">
+    <article class="tier" style="position:relative"><h3>Scaled Learning Brief</h3><p><span class="amount">$0<small></small></span></p><p class="meta">Free newsletter</p><p><span class="example-chip">Example pricing</span></p><ul class="check"><li>Weekly email: one insight, one tool, one AI tip</li><li>Previews of each issue</li></ul><a class="btn btn-ghost" href="#newsletter">Get the Brief</a></article>
+    <article class="tier" style="position:relative"><h3>Print add-on</h3><p><span class="amount">+$80<small>/yr</small></span></p><p class="meta">Optional</p><p><span class="example-chip">Example pricing</span></p><ul class="check"><li>Quarterly printed best-of issue</li><li>Add to an annual subscription</li></ul><a class="btn btn-ghost" href="#checkout-coming-soon" data-checkout="magazine-print-addon">Add print</a></article>
     <article class="tier" style="position:relative"><h3>Corporate license</h3><p><span class="amount">$1,500<small>/yr</small></span></p><p class="meta">Seat bands available</p><p><span class="example-chip">Example pricing</span></p><ul class="check"><li>Seats for your team (from 10)</li><li>Internal sharing rights</li><li>Team discussion guides</li></ul><a class="btn btn-ghost" href="contact.html">Talk to us</a></article>
   </div>
   <p class="small center mt">Or get the magazine included with a <a href="pricing.html#membership">membership</a>, along with the community and member knowledge library.</p>
@@ -113,8 +119,8 @@
 <section class="section-sm"><div class="wrap"><div class="newsletter" id="newsletter">
   <div><span class="kicker" style="color:#ffb627">Free newsletter</span><h2 class="display" style="font-size:clamp(1.7rem,3.4vw,2.5rem)">Get the Scaled Learning Brief</h2><p>A free weekly email: one short insight, one tool you can use on Monday, and one practical AI tip. Plus a first look at each month's magazine.</p></div>
   <form class="form" data-placeholder="Thanks! (Placeholder form: this example site has no backend, so nothing was sent or stored.)" novalidate>
-    <label for="nl-email-2">Work email</label>
-    <div class="inline"><input id="nl-email-2" type="email" name="email" placeholder="you@company.com" autocomplete="email" required><button class="btn btn-primary" type="submit">Subscribe free</button></div>
+    <label for="nl-email-3">Work email</label>
+    <div class="inline"><input id="nl-email-3" type="email" name="email" placeholder="you@company.com" autocomplete="email" required><button class="btn btn-primary" type="submit">Subscribe free</button></div>
     <div class="hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
     <p class="placeholder-note"><strong>Placeholder form.</strong> This example build has no backend. Nothing is sent or stored.</p>
     <p class="form-status" role="status" aria-live="polite"></p>
@@ -132,7 +138,7 @@
       </div>
       <div><h4>Learn</h4><ul>
         <li><a href="courses.html">Courses &amp; cohorts</a></li><li><a href="coaching.html">Coaching &amp; mentoring</a></li>
-        <li><a href="ai-agents.html">AI learning agents</a></li><li><a href="resources.html">Resources</a></li></ul></div>
+        <li><a href="ai-agents.html">AI learning agents</a></li><li><a href="books.html">Books</a></li><li><a href="resources.html">Resources</a></li></ul></div>
       <div><h4>Membership</h4><ul>
         <li><a href="magazine.html">ScaledLearning Magazine</a></li><li><a href="pricing.html#membership">Become a member</a></li>
         <li><a href="pricing.html">Pricing</a></li><li><a href="enterprise.html">Enterprise &amp; teams</a></li></ul></div>

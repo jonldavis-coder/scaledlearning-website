@@ -45,3 +45,19 @@
     out.innerHTML='<strong>Your example score: '+pct+'%</strong><br>'+msg+'<br><span class="small">This is an illustrative self-check, not a validated assessment. Nothing you entered was stored or sent.</span>';
   });
 })();
+/* Placeholder checkout: buttons with data-checkout open a "coming soon" notice. No payment is taken.
+   Before launch, replace each href with a Stripe Payment Link / Gumroad / Lemon Squeezy URL and remove this handler. */
+(function(){
+  var btns=document.querySelectorAll('[data-checkout]');if(!btns.length)return;
+  var d=document.createElement('dialog');d.className='checkout-modal';d.setAttribute('aria-labelledby','co-title');
+  d.innerHTML='<div class="inner"><span class="example-chip">Placeholder</span><h2 id="co-title">Checkout coming soon</h2><p>This example site doesn\'t take payments yet. No payment was taken and no data was collected.</p><p class="small">Item: <code class="co-item"></code></p><button class="btn btn-violet co-close" type="button">Close</button></div>';
+  document.body.appendChild(d);
+  d.querySelector('.co-close').addEventListener('click',function(){d.close();});
+  d.addEventListener('click',function(e){if(e.target===d)d.close();});
+  btns.forEach(function(b){b.addEventListener('click',function(e){
+    if(typeof d.showModal!=='function')return; // fallback: follow #checkout-coming-soon anchor
+    e.preventDefault();d.querySelector('.co-item').textContent=b.getAttribute('data-checkout');d.showModal();d.querySelector('.co-close').focus();
+  });});
+  // Preselect a free book when a "Get the free book" button is used
+  document.querySelectorAll('[data-book]').forEach(function(a){a.addEventListener('click',function(){var s=document.getElementById('fb-book');if(s)s.value=a.getAttribute('data-book');});});
+})();

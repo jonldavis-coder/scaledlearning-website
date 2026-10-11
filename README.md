@@ -7,7 +7,6 @@ Marketing site for **ScaledLearning** (scaledlearning.com), owner Jonathan Davis
 - Buy/Subscribe buttons carry `data-checkout` keys (e.g. `magazine-single`, `magazine-annual`, `magazine-monthly`, `book-<slug>`, `book-<slug>-print`) and link to Stripe Payment Links (mapping in the generator's `stripe_links.py`, created idempotently by `stripe/provision.py`; after payment Stripe redirects to `thank-you.html`). Swap their hrefs for Stripe Payment Links, Gumroad or Lemon Squeezy URLs before launch.
 - Books: `books.html` plus one `book-<slug>.html` detail page per title. Covers live in `assets/books/` (WebP + thumbnail + JPG fallback). The Pink Flamingo Method uses the cover Jonathan supplied. The other 13 are composed from supplied photoreal artwork by `compose_ai_covers.py` in the build folder.
 - Contains no testimonials, client logos, statistics or claimed credentials.
-- Philosophy paraphrases John Hagel's published work on scalable learning, with links.
 
 Live: https://scaledlearning.com (also https://jonldavis-coder.github.io/scaledlearning-website/)
 

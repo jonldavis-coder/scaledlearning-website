@@ -1,8 +1,23 @@
 /* ScaledLearning — minimal JS (nav, year, spam-safe email, placeholder forms) */
 (function(){
-  var t=document.querySelector('.nav-toggle'),l=document.getElementById('nav-links');
-  if(t&&l){t.addEventListener('click',function(){var o=l.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});
-    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&l.classList.contains('open')){l.classList.remove('open');t.setAttribute('aria-expanded','false');t.focus();}});}
+  // Header: mobile menu toggle and the keyboard-accessible "More" disclosure menu.
+  var t=document.querySelector('.hdr-toggle'),n=document.getElementById('hdr-nav');
+  var mb=document.querySelector('.hdr-more-btn'),mm=document.getElementById('hdr-more-menu');
+  function setMenu(o){if(!t)return;n.classList.toggle('open',o);t.setAttribute('aria-expanded',o?'true':'false');t.setAttribute('aria-label',o?'Close menu':'Open menu');}
+  function setMore(o){if(mb)mb.setAttribute('aria-expanded',o?'true':'false');}
+  if(t&&n){t.addEventListener('click',function(){setMenu(!n.classList.contains('open'));});}
+  if(mb&&mm){
+    mb.addEventListener('click',function(e){e.stopPropagation();setMore(mb.getAttribute('aria-expanded')!=='true');});
+    mb.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){e.preventDefault();setMore(true);var f=mm.querySelector('a');if(f)f.focus();}});
+    mm.addEventListener('keydown',function(e){var a=[].slice.call(mm.querySelectorAll('a')),i=a.indexOf(document.activeElement);
+      if(e.key==='ArrowDown'){e.preventDefault();a[(i+1)%a.length].focus();}
+      if(e.key==='ArrowUp'){e.preventDefault();a[(i-1+a.length)%a.length].focus();}});
+    mb.parentNode.addEventListener('focusout',function(e){if(!mb.parentNode.contains(e.relatedTarget))setMore(false);});
+    document.addEventListener('click',function(e){if(!mb.parentNode.contains(e.target))setMore(false);});
+  }
+  document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;
+    if(mb&&mb.getAttribute('aria-expanded')==='true'){setMore(false);mb.focus();}
+    else if(n&&n.classList.contains('open')){setMenu(false);t.focus();}});
   document.querySelectorAll('[data-year]').forEach(function(el){el.textContent=new Date().getFullYear();});
   // Spam-safe email: assembled at runtime from parts, never present as plain text in HTML.
   document.querySelectorAll('[data-eu]').forEach(function(el){

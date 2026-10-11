@@ -11,6 +11,6 @@ Marketing site for **ScaledLearning** (scaledlearning.com), owner Jonathan Davis
 
 Live: https://scaledlearning.com (also https://jonldavis-coder.github.io/scaledlearning-website/)
 
-## Newsletter and print back-orders
+## Newsletter and print editions
 - `newsletter.html`: the free monthly Scaled Learning Brief. A compact signup band sits in the footer of every page, and the header has a "Free newsletter" button. All signup forms are placeholders (no backend, honeypot field).
-- Print Buy buttons (`data-print="book-<slug>-print"`) link to `backorder.html?book=<slug>` (noindex), which reads the slug, shows the cover, title and eBook price, and links to `book-<slug>.html#buy-ebook`. eBook buttons still use the placeholder checkout (`data-checkout`).
+- Print Buy buttons (`data-checkout="book-<slug>-print"`, `act-issue-01-print`) link to Stripe Payment Links that collect a shipping address (US, CA, GB, AU). `backorder.html` is kept only as a redirect to `books.html` so old links still work.

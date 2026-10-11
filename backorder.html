@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <!--
   =====================================================================
   ScaledLearning (scaledlearning.com) marketing website.
@@ -6,109 +6,8 @@
   Prices are list prices in USD.
   =====================================================================
 -->
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, follow">
-<title>Print edition back-ordered | ScaledLearning</title>
-<meta name="description" content="The print edition of this book is currently back-ordered. Get the eBook now or ask to be notified when print is available.">
-<meta name="theme-color" content="#2a1b6e">
-<meta property="og:title" content="Print edition back-ordered | ScaledLearning">
-<meta property="og:description" content="The print edition of this book is currently back-ordered. Get the eBook now or ask to be notified when print is available.">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/styles.css?v=20261010">
-</head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-  <nav class="wrap nav" aria-label="Main">
-    <a class="brand" href="index.html" aria-label="ScaledLearning home"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#5a3fd0"/><stop offset="1" stop-color="#2a1b6e"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><circle cx="11" cy="28" r="3.5" fill="#ffb627"/><circle cx="20" cy="21" r="4.5" fill="#ff8f4a"/><circle cx="30" cy="12" r="5.5" fill="#ff6f59"/><path d="M11 28 L20 21 L30 12" stroke="#fff" stroke-width="1.6" stroke-dasharray="2 2.4" fill="none"/></svg><span>Scaled<b>Learning</b></span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
-    </button>
-    <ul class="nav-links" id="nav-links"><li><a href="philosophy.html">Philosophy</a></li><li><a href="courses.html">Courses</a></li><li><a href="coaching.html">Coaching</a></li><li><a href="ai-agents.html">AI Agents</a></li><li><a href="magazine.html">Magazine</a></li><li><a href="comics.html">ACT Comic Series</a></li><li><a href="books.html">Books</a></li><li><a href="resources.html">Resources</a></li><li><a href="enterprise.html">Enterprise</a></li><li><a href="pricing.html">Pricing</a></li><li><a class="btn btn-news" href="newsletter.html"><span class="dot" aria-hidden="true"></span>Free newsletter</a></li><li><a class="btn btn-primary" href="pricing.html#membership">Become a member</a></li></ul>
-  </nav>
-</header>
-<main id="main">
-
-<!-- Back-order page for print editions. Reads ?book=<slug> and fills in the title, cover and eBook price from the map below (generic fallback if the slug is unknown). Placeholder only: no backend, nothing is sent or stored. -->
-<section class="book-detail backorder"><div class="wrap">
-  <p class="crumbs"><a href="books.html">Books</a> / Print edition back-ordered</p>
-  <div class="book-detail-grid">
-    <div class="book-detail-cover"><div class="bk bk-photo bo-cover"><img id="bo-cover" src="assets/books/backorder-fallback.svg" width="400" height="600" alt="Book cover"><span class="bk-flag">Print back-ordered</span></div></div>
-    <div>
-      <span class="tag coral">Back-ordered</span> <span class="tag amber">By Jonathan Davis</span>
-      <h1 class="serif-title"><span id="bo-title">This book</span></h1>
-      <p class="lead">The <span id="bo-fmt">print edition</span> is currently back-ordered. The eBook is ready now, and you can ask us to let you know as soon as print copies are available.</p>
-      <div class="buy-box bo-box">
-        <div class="buy-opt"><span class="meta" id="bo-dlabel">eBook (PDF / ePub) &middot; available now</span><span class="amount" id="bo-price">Read today</span><a class="btn btn-primary btn-lg" id="bo-ebook" href="books.html#buy">Get the eBook now</a></div>
-      </div>
-      <p><span class="small">Members save 20%.</span></p>
-      <form class="form card bo-form" data-placeholder="Thanks! Online signup is launching soon." novalidate>
-        <h2 class="toc-head" style="margin-top:0">Notify me when print is available <span class="example-chip">Optional</span></h2>
-        <label for="bo-email">Email</label>
-        <div class="inline"><input id="bo-email" type="email" name="email" placeholder="you@company.com" autocomplete="email" required><button class="btn btn-violet" type="submit">Notify me</button></div>
-        <input type="hidden" name="book" id="bo-book" value="">
-        <div class="hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-        <p class="placeholder-note"><strong>Launching soon.</strong> Online signup isn&#39;t live yet, so nothing is sent or stored.</p>
-        <p class="form-status" role="status" aria-live="polite"></p>
-      </form>
-      <p class="mt"><a class="card-link" id="bo-back" href="books.html">&larr; Back to all books</a></p>
-    </div>
-  </div>
-</div></section>
-<script>
-(function(){
-  var BOOKS={"pink-flamingo-method":{"t":"The Pink Flamingo Method","f":"Paperback","e":"$14.99","p":"$27.99","c":"assets/books/pink-flamingo-method-thumb.webp?v=3"},"killing-agile":{"t":"Killing Agile","f":"Paperback","e":"$14.99","p":"$27.99","c":"assets/books/killing-agile-thumb.webp?v=7"},"ai-driven-okrs":{"t":"AI-Driven OKRs","f":"Paperback","e":"$14.99","p":"$27.99","c":"assets/books/ai-driven-okrs-thumb.webp?v=8"},"ai-driven-balanced-scorecards":{"t":"AI-Driven Balanced Scorecards","f":"Paperback","e":"$14.99","p":"$29.99","c":"assets/books/ai-driven-balanced-scorecards-thumb.webp?v=4"},"organizing-for-organizational-ai":{"t":"Organizing for Organizational AI","f":"Paperback","e":"$14.99","p":"$29.99","c":"assets/books/organizing-for-organizational-ai-thumb.webp?v=4"},"lean-agile-to-ai-and-scaled-learning":{"t":"From Lean-Agile to Artificial Intelligence and Scaled Learning","f":"Paperback","e":"$14.99","p":"$27.99","c":"assets/books/lean-agile-to-ai-and-scaled-learning-thumb.webp?v=4"},"data-governance-age-of-ai":{"t":"Data Governance in the Age of AI","f":"Paperback","e":"$14.99","p":"$29.99","c":"assets/books/data-governance-age-of-ai-thumb.webp?v=3"},"data-quality-for-ai":{"t":"Data Quality for AI","f":"Paperback","e":"$12.99","p":"$24.99","c":"assets/books/data-quality-for-ai-thumb.webp?v=3"},"llms-for-leaders":{"t":"LLMs for Leaders","f":"Paperback","e":"$12.99","p":"$24.99","c":"assets/books/llms-for-leaders-thumb.webp?v=3"},"ai-governance-playbook":{"t":"The AI Governance Playbook","f":"Paperback","e":"$14.99","p":"$29.99","c":"assets/books/ai-governance-playbook-thumb.webp?v=4"},"context-driven":{"t":"Context-Driven","f":"Paperback","e":"$12.99","p":"$24.99","c":"assets/books/context-driven-thumb.webp?v=4"},"menial-and-meaningful":{"t":"The Menial and the Meaningful","f":"Hardcover","e":"$14.99","p":"$32.00","c":"assets/books/menial-and-meaningful-thumb.webp?v=4"},"agents-as-teammates":{"t":"Agents as Teammates","f":"Paperback","e":"$14.99","p":"$27.99","c":"assets/books/agents-as-teammates-thumb.webp?v=3"},"prompting-the-enterprise":{"t":"Prompting the Enterprise","f":"Paperback","e":"$12.99","p":"$24.99","c":"assets/books/prompting-the-enterprise-thumb.webp?v=3"},"100-ai-agile-teams":{"t":"100 AI-Agile Teams","f":"Paperback","e":"$14.99","p":"$29.99","c":"assets/books/100-ai-agile-teams-thumb.webp?v=5"},"perfect-ai-organization":{"t":"The Perfect AI Organization","f":"Hardcover","e":"$14.99","p":"$32.00","c":"assets/books/perfect-ai-organization-thumb.webp?v=3"},"outcome-driven-ai":{"t":"Outcome-Driven AI","f":"Paperback","e":"$14.99","p":"$27.99","c":"assets/books/outcome-driven-ai-thumb.webp?v=3"},"continuous-conversations":{"t":"Continuous Conversations","f":"Paperback","e":"$12.99","p":"$24.99","c":"assets/books/continuous-conversations-thumb.webp?v=3"},"always-on-ai-analytics":{"t":"Always-On AI Analytics","f":"Paperback","e":"$14.99","p":"$27.99","c":"assets/books/always-on-ai-analytics-thumb.webp?v=3"},"metaphors-for-innovation":{"t":"Metaphors for Innovation","f":"Paperback","e":"$12.99","p":"$24.99","c":"assets/books/metaphors-for-innovation-thumb.webp?v=3"},"33-degrees":{"t":"33\u00b0","f":"Paperback","e":"$12.99","p":"$24.99","c":"assets/books/33-degrees-thumb.webp?v=3"},"act-issue-01":{"t":"ACT Comic Series No. 1: The Sprint That Never Ends!","f":"Pocket print","e":"$4.99","p":"$4.99","c":"assets/comics/act-issue-01-thumb.webp?v=1","u":"comics.html#buy-digital","l":"Get the digital PDF now","d":"Digital PDF &middot; available now","k":"comics.html","kl":"ACT Comic Series"}};
-  var slug=(new URLSearchParams(location.search).get('book')||'').toLowerCase();
-  var b=Object.prototype.hasOwnProperty.call(BOOKS,slug)?BOOKS[slug]:null;
-  if(!b)return; // generic fallback stays in place
-  document.getElementById('bo-title').textContent=b.t;
-  document.getElementById('bo-fmt').textContent=b.f.toLowerCase()+' edition ('+b.p+')';
-  document.getElementById('bo-price').textContent=b.e;
-  var img=document.getElementById('bo-cover');img.src=b.c;img.alt='Cover of '+b.t+' by Jonathan Davis';
-  var a=document.getElementById('bo-ebook');a.href=b.u||('book-'+slug+'.html#buy-ebook');if(b.l)a.textContent=b.l;a.setAttribute('aria-label',(b.l||'Get the eBook now')+': '+b.t);
-  if(b.d)document.getElementById('bo-dlabel').innerHTML=b.d;
-  if(b.k){var k=document.getElementById('bo-back');k.href=b.k;k.innerHTML='&larr; Back to '+b.kl;var cr=document.querySelector('.crumbs a');cr.href=b.k;cr.textContent=b.kl;}
-  document.getElementById('bo-book').value=slug;
-  document.title='Print edition back-ordered: '+b.t+' | ScaledLearning';
-})();
-</script>
-</main>
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-news">
-      <div><span class="kicker" style="color:#ffb627">Free &middot; monthly</span><h2>The Scaled Learning Brief</h2><p>One free email a month: practical ideas on scalable learning, agentic AI and agility at scale. <a href="newsletter.html">What's inside &rarr;</a></p></div>
-      <form class="form footer-news-form" data-placeholder="Thanks! Online signup is launching soon." novalidate>
-        <label for="footer-nl-email">Work email</label>
-        <div class="inline"><input id="footer-nl-email" type="email" name="email" placeholder="you@company.com" autocomplete="email" required><button class="btn btn-primary" type="submit">Get it free</button></div>
-        <div class="hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-        <p class="small fn-note">Free, monthly, unsubscribe any time. Online signup is launching soon.</p>
-        <p class="form-status" role="status" aria-live="polite"></p>
-      </form>
-    </div>
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#5a3fd0"/><stop offset="1" stop-color="#2a1b6e"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><circle cx="11" cy="28" r="3.5" fill="#ffb627"/><circle cx="20" cy="21" r="4.5" fill="#ff8f4a"/><circle cx="30" cy="12" r="5.5" fill="#ff6f59"/><path d="M11 28 L20 21 L30 12" stroke="#fff" stroke-width="1.6" stroke-dasharray="2 2.4" fill="none"/></svg><span>Scaled<b style="color:#ffb627">Learning</b></span></a>
-        <p class="mt">From scalable efficiency to scalable learning. Learn at the speed of change. Scale it with AI.</p>
-        <p class="small">Let AI agents handle the menial, so people can do the meaningful.</p>
-      </div>
-      <div><h4>Learn</h4><ul>
-        <li><a href="courses.html">Courses &amp; cohorts</a></li><li><a href="coaching.html">Coaching &amp; mentoring</a></li>
-        <li><a href="ai-agents.html">AI learning agents</a></li><li><a href="books.html">Books</a></li><li><a href="resources.html">Resources</a></li></ul></div>
-      <div><h4>Membership</h4><ul>
-        <li><a href="newsletter.html">Free monthly newsletter</a></li><li><a href="magazine.html">ScaledLearning Magazine</a></li><li><a href="comics.html">ACT Comic Series</a></li><li><a href="pricing.html#membership">Become a member</a></li>
-        <li><a href="pricing.html">Pricing</a></li><li><a href="enterprise.html">Enterprise &amp; teams</a></li></ul></div>
-      <div><h4>Company</h4><ul>
-        <li><a href="philosophy.html">Philosophy</a></li><li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy (draft)</a></li></ul></div>
-    </div>
-    <div class="footer-legal">
-      <p>&copy; <span data-year>2026</span> ScaledLearning. All rights reserved. Prices are in USD.</p>
-    </div>
-  </div>
-</footer>
-<script src="assets/main.js" defer></script>
-</body>
-</html>
+<html lang="en"><head><meta charset="utf-8"><title>Moved: books.html</title>
+<meta name="robots" content="noindex"><link rel="canonical" href="books.html">
+<meta http-equiv="refresh" content="0; url=books.html">
+<script>location.replace("books.html" + location.hash);</script></head>
+<body><p>This page has moved to <a href="books.html">books.html</a>.</p></body></html>

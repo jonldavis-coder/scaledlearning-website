@@ -537,3 +537,10 @@ textarea{min-height:140px;resize:vertical}
   .hdr-links a,.hdr-more-btn{padding:8px 9px;font-size:.9rem}
   .hdr-cta .btn{padding-left:16px;padding-right:16px}
 }
+
+/* Magazine: finished photo covers (Foundr-style, rendered images) */
+.mag-cover.mag-photo{padding:0!important;background:#1c1340!important;display:block}
+.mag-cover.mag-photo picture,.mag-cover.mag-photo img{display:block;width:100%;height:100%}
+.mag-cover.mag-photo img{object-fit:cover;object-position:center top}
+.mag-cover.mag-photo .mag-badge{z-index:2}
+.mag-cover.mag-photo::after{z-index:1}

@@ -441,3 +441,16 @@ textarea{min-height:140px;resize:vertical}
 .hero .nl-signup h2{color:var(--ink)}
 .flash-card{border:2px solid var(--coral);box-shadow:0 10px 30px rgba(255,111,89,.18)}
 .flash-card .tag{margin-bottom:6px}
+/* ACT Comic Series */
+.act-cover img{width:100%;height:auto;display:block;border-radius:6px;box-shadow:0 18px 40px rgba(20,10,0,.35)}
+.act-hero-cover{max-width:360px;justify-self:center;transform:rotate(2deg)}
+.act-issue-cover{max-width:420px}
+.act-band{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:center;background:linear-gradient(135deg,#fff3c4,#ffe08a);border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink);border-radius:var(--r);padding:22px 26px}
+.act-band h3{font-size:clamp(1.4rem,2.6vw,2rem);margin:4px 0 6px}
+.act-band p{margin:0 0 12px}
+.act-band-cover{transform:rotate(-3deg)}
+@media (max-width:640px){.act-band{grid-template-columns:1fr}.act-band-cover{max-width:160px}}
+.act-upcoming{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.act-upcoming li{display:grid;grid-template-columns:80px 1fr;gap:16px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:var(--r-sm);padding:16px 18px}
+.act-upcoming h3{margin:0 0 4px}.act-upcoming p{margin:0}
+@media (min-width:1381px){.nav-links a{padding:8px 6px;font-size:.86rem}.nav-links .btn{padding:10px 13px;font-size:.86rem}.nav-links .btn-news{margin-left:6px}.nav-links .btn-primary{margin-left:4px}}

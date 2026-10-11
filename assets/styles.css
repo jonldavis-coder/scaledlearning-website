@@ -506,3 +506,14 @@ textarea{min-height:140px;resize:vertical}
 .founder-shelf .teaser-book:nth-child(2){transform:translateY(-18px)}
 .founder-shelf .teaser-book:nth-child(odd){transform:none}
 @media (max-width:860px){.founder-shelf{margin:0 auto 8px}}
+/* Legal pages (privacy, terms) */
+.legal-updated{margin:0 0 18px}
+.legal-toc{background:#fff;border:1px solid var(--line);border-radius:var(--r-sm);padding:20px 26px;margin:28px 0 8px}
+.legal-toc h2{font-size:1.1rem;margin:0 0 10px;text-transform:uppercase;letter-spacing:.1em}
+.legal-toc ol{margin:0;padding-left:1.3em;columns:2;column-gap:32px}
+.legal-toc li{margin:0 0 6px;break-inside:avoid}
+.legal-toc a{color:var(--violet);text-decoration:none;font-weight:600}.legal-toc a:hover{text-decoration:underline}
+.legal-sec{scroll-margin-top:96px}
+.legal ul{padding-left:1.3em}.legal li{margin:6px 0}
+@media (max-width:640px){.legal-toc ol{columns:1}}
+.footer-legal a{color:inherit;text-decoration:underline}

@@ -45,7 +45,7 @@
     out.innerHTML='<strong>Your score: '+pct+'%</strong><br>'+msg+'<br><span class="small">This is an illustrative self-check, not a validated assessment. Nothing you entered was stored or sent.</span>';
   });
 })();
-/* Checkout: buttons with data-checkout link to contact.html until each href is swapped for a real checkout URL. */
+/* Checkout: buttons with data-checkout link straight to Stripe Payment Links (same tab); no JS needed. */
 (function(){
   // Preselect a free book when a "Get the free book" button is used
   document.querySelectorAll('[data-book]').forEach(function(a){a.addEventListener('click',function(){var s=document.getElementById('fb-book');if(s)s.value=a.getAttribute('data-book');});});

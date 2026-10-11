@@ -395,3 +395,47 @@ textarea{min-height:140px;resize:vertical}
 .book-learn li{position:relative;padding-left:30px}
 .book-learn li::before{content:"";position:absolute;left:0;top:.45em;width:16px;height:9px;border-left:3px solid var(--amber,#f5a524);border-bottom:3px solid var(--amber,#f5a524);transform:rotate(-45deg)}
 .more-books{border-top:1px solid var(--line)}
+.bo-cover img{width:100%;height:auto;display:block}
+.bo-box{grid-template-columns:1fr;max-width:460px}
+.bo-box .buy-opt{border-color:var(--coral-d);box-shadow:5px 5px 0 var(--coral-d)}
+.bo-form{margin-top:22px;max-width:560px}
+.btn-lg{font-size:1.05rem;padding:15px 26px}
+/* Free monthly newsletter: header button, footer band, page */
+.btn-news{background:#fff3d6;color:var(--indigo)!important;border:2px solid var(--amber);box-shadow:none;display:inline-flex!important;align-items:center;gap:7px}
+.btn-news:hover,.btn-news[aria-current="page"]{background:var(--amber);color:var(--ink)!important}
+.btn-news .dot{width:8px;height:8px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 3px rgba(255,111,89,.25)}
+.nav-links .btn-news{margin-left:8px}
+@media (max-width:1240px){.nav-links .btn-news{margin:8px 0 0;justify-content:center}}
+.footer-news{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center;background:linear-gradient(135deg,rgba(255,182,39,.14),rgba(255,111,89,.12));border:1px solid rgba(255,182,39,.35);border-radius:var(--r);padding:26px 30px;margin-bottom:44px}
+.footer-news h2{color:#fff;font-size:1.5rem;margin:4px 0 6px;letter-spacing:-.01em}
+.footer-news p{margin:0}
+.footer-news a{color:var(--amber)}
+.footer-news-form{gap:8px}
+.footer-news-form label{color:#fff;font-weight:700;font-size:.9rem}
+.footer-news-form .inline,.bo-form .inline{display:flex;gap:10px;flex-wrap:wrap}
+.footer-news-form .inline input,.bo-form .inline input{flex:1 1 200px}
+.footer-news-form .fn-note{color:#b9b0e0;margin:0}
+.footer-news-form .form-status{color:#fff;margin:0}
+@media (max-width:860px){.footer-news{grid-template-columns:1fr;padding:22px}}
+.nl-hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+@media (max-width:900px){.nl-hero-grid{grid-template-columns:1fr;gap:30px}}
+.nl-facts{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-wrap:wrap;gap:14px}
+.nl-facts li{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:12px 16px;min-width:140px}
+.nl-facts strong{display:block;font-size:1.25rem;color:var(--amber)}
+.nl-facts span{font-size:.9rem;color:#e9e3ff}
+.nl-signup{color:var(--ink);padding:28px}
+.nl-signup h2{margin:0 0 4px;font-size:1.6rem}
+.nl-topics{margin:0;padding-left:1.4em;display:grid;gap:12px;font-size:1.05rem}
+.nl-topics li::marker{color:var(--coral-d);font-weight:800}
+/* Header fit with the newsletter button */
+.site-header .wrap.nav{max-width:1400px}
+@media (min-width:1381px){.nav-links{gap:2px}.nav-links a{padding:8px 9px;font-size:.92rem}.nav-links .btn{padding:10px 15px}}
+@media (max-width:1380px){
+  .nav-toggle{display:block}
+  .nav-links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 16px 18px;display:none;box-shadow:var(--shadow)}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:12px}
+  .nav-links .btn{margin:8px 0 0;text-align:center;justify-content:center}
+}
+@media (max-width:1380px){.nav-links .btn-news{display:flex!important;margin:8px 0 0}}
+.hero .nl-signup h2{color:var(--ink)}

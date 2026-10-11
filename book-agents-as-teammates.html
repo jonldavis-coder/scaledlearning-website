@@ -29,12 +29,12 @@
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
     </button>
-    <ul class="nav-links" id="nav-links"><li><a href="philosophy.html">Philosophy</a></li><li><a href="courses.html">Courses</a></li><li><a href="coaching.html">Coaching</a></li><li><a href="ai-agents.html">AI Agents</a></li><li><a href="magazine.html">Magazine</a></li><li><a href="books.html" aria-current="page">Books</a></li><li><a href="resources.html">Resources</a></li><li><a href="enterprise.html">Enterprise</a></li><li><a href="pricing.html">Pricing</a></li><li><a class="btn btn-primary" href="pricing.html#membership">Become a member</a></li></ul>
+    <ul class="nav-links" id="nav-links"><li><a href="philosophy.html">Philosophy</a></li><li><a href="courses.html">Courses</a></li><li><a href="coaching.html">Coaching</a></li><li><a href="ai-agents.html">AI Agents</a></li><li><a href="magazine.html">Magazine</a></li><li><a href="books.html" aria-current="page">Books</a></li><li><a href="resources.html">Resources</a></li><li><a href="enterprise.html">Enterprise</a></li><li><a href="pricing.html">Pricing</a></li><li><a class="btn btn-news" href="newsletter.html"><span class="dot" aria-hidden="true"></span>Free newsletter</a></li><li><a class="btn btn-primary" href="pricing.html#membership">Become a member</a></li></ul>
   </nav>
 </header>
 <main id="main">
 
-<!-- PLACEHOLDER CHECKOUT: every element with data-checkout="..." is a placeholder. Before launch, swap each href for a real Stripe Payment Link, Gumroad or Lemon Squeezy checkout URL (keyed by the data-checkout value). Until then the buttons only open a 'Checkout coming soon' notice. No payment is taken. -->
+<!-- PRINT EDITIONS: print Buy buttons (data-print="book-<slug>-print") link to backorder.html?book=<slug> while print is back-ordered; swap them for real checkout links when print is available. --><!-- PLACEHOLDER CHECKOUT: every element with data-checkout="..." is a placeholder. Before launch, swap each href for a real Stripe Payment Link, Gumroad or Lemon Squeezy checkout URL (keyed by the data-checkout value). Until then the buttons only open a 'Checkout coming soon' notice. No payment is taken. -->
 <section class="book-detail"><div class="wrap">
   <p class="crumbs"><a href="books.html">Books</a> / Agents as Teammates</p>
   <div class="book-detail-grid">
@@ -45,8 +45,8 @@
       <p class="bk-subline lead">Designing work for people and AI agents</p>
       <p class="lead">A practical guide to dividing work between people and AI agents, with clear roles, handoffs and oversight, and people firmly in charge.</p>
       <div class="buy-box">
-        <div class="buy-opt"><span class="meta">eBook (PDF / ePub)</span><span class="amount">$14.99</span><a class="btn btn-primary" href="#checkout-coming-soon" data-checkout="book-agents-as-teammates">Buy eBook</a></div>
-        <div class="buy-opt"><span class="meta">Paperback</span><span class="amount">$27.99</span><a class="btn btn-ghost" href="#checkout-coming-soon" data-checkout="book-agents-as-teammates-print">Buy paperback</a></div>
+        <div class="buy-opt" id="buy-ebook"><span class="meta">eBook (PDF / ePub)</span><span class="amount">$14.99</span><a class="btn btn-primary" href="#checkout-coming-soon" data-checkout="book-agents-as-teammates">Buy eBook</a></div>
+        <div class="buy-opt"><span class="meta">Paperback</span><span class="amount">$27.99</span><a class="btn btn-ghost" href="backorder.html?book=agents-as-teammates" data-print="book-agents-as-teammates-print">Buy paperback</a></div>
       </div>
       <p><span class="example-chip">Example pricing</span> <span class="small">Members save 20% (example discount). <a href="pricing.html#membership">See membership</a>.</span></p>
       <div id="checkout-coming-soon" class="placeholder-note mt" role="note"><strong>Checkout coming soon.</strong> This example site doesn't take payments yet. Purchase buttons are placeholders and will be connected to a secure checkout provider before launch. No payment is taken and no data is collected.</div>
@@ -69,6 +69,16 @@
 </main>
 <footer class="site-footer">
   <div class="wrap">
+    <div class="footer-news">
+      <div><span class="kicker" style="color:#ffb627">Free &middot; monthly</span><h2>The Scaled Learning Brief</h2><p>One free email a month: practical ideas on scalable learning, agentic AI and agility at scale. <a href="newsletter.html">What's inside &rarr;</a></p></div>
+      <form class="form footer-news-form" data-placeholder="Thanks! (Placeholder form: this example site has no backend, so nothing was sent or stored.)" novalidate>
+        <label for="footer-nl-email">Work email</label>
+        <div class="inline"><input id="footer-nl-email" type="email" name="email" placeholder="you@company.com" autocomplete="email" required><button class="btn btn-primary" type="submit">Get it free</button></div>
+        <div class="hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <p class="small fn-note">Free, monthly, unsubscribe any time. Placeholder form: nothing is sent or stored.</p>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="brand" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#5a3fd0"/><stop offset="1" stop-color="#2a1b6e"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><circle cx="11" cy="28" r="3.5" fill="#ffb627"/><circle cx="20" cy="21" r="4.5" fill="#ff8f4a"/><circle cx="30" cy="12" r="5.5" fill="#ff6f59"/><path d="M11 28 L20 21 L30 12" stroke="#fff" stroke-width="1.6" stroke-dasharray="2 2.4" fill="none"/></svg><span>Scaled<b style="color:#ffb627">Learning</b></span></a>
@@ -79,7 +89,7 @@
         <li><a href="courses.html">Courses &amp; cohorts</a></li><li><a href="coaching.html">Coaching &amp; mentoring</a></li>
         <li><a href="ai-agents.html">AI learning agents</a></li><li><a href="books.html">Books</a></li><li><a href="resources.html">Resources</a></li></ul></div>
       <div><h4>Membership</h4><ul>
-        <li><a href="magazine.html">ScaledLearning Magazine</a></li><li><a href="pricing.html#membership">Become a member</a></li>
+        <li><a href="newsletter.html">Free monthly newsletter</a></li><li><a href="magazine.html">ScaledLearning Magazine</a></li><li><a href="pricing.html#membership">Become a member</a></li>
         <li><a href="pricing.html">Pricing</a></li><li><a href="enterprise.html">Enterprise &amp; teams</a></li></ul></div>
       <div><h4>Company</h4><ul>
         <li><a href="philosophy.html">Philosophy</a></li><li><a href="about.html">About</a></li>

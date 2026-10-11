@@ -10,3 +10,7 @@ Example/preview marketing site for **ScaledLearning** (scaledlearning.com), owne
 - Philosophy paraphrases John Hagel's published work on scalable learning, with links. ScaledLearning is not affiliated with John Hagel or Deloitte.
 
 Preview: https://jonldavis-coder.github.io/scaledlearning-website/
+
+## Newsletter and print back-orders (example build)
+- `newsletter.html`: the free monthly Scaled Learning Brief. A compact signup band sits in the footer of every page, and the header has a "Free newsletter" button. All signup forms are placeholders (no backend, honeypot field).
+- Print Buy buttons (`data-print="book-<slug>-print"`) link to `backorder.html?book=<slug>` (noindex), which reads the slug, shows the cover, title and eBook price, and links to `book-<slug>.html#buy-ebook`. eBook buttons still use the placeholder checkout (`data-checkout`).

@@ -439,3 +439,5 @@ textarea{min-height:140px;resize:vertical}
 }
 @media (max-width:1380px){.nav-links .btn-news{display:flex!important;margin:8px 0 0}}
 .hero .nl-signup h2{color:var(--ink)}
+.flash-card{border:2px solid var(--coral);box-shadow:0 10px 30px rgba(255,111,89,.18)}
+.flash-card .tag{margin-bottom:6px}

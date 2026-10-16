@@ -1,0 +1,8 @@
+/* TEAM */
+Owner: Jonathan Davis
+Site: https://scaledlearning.com/
+
+/* SITE */
+Last update: 2026/10/16
+Language: English
+Standards: HTML5, CSS3

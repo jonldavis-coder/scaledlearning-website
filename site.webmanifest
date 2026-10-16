@@ -1,0 +1,22 @@
+{
+  "name": "ScaledLearning",
+  "short_name": "ScaledLearning",
+  "description": "Courses, books, a monthly magazine and agentic AI learning tools for scalable learning.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#2a1b6e",
+  "theme_color": "#2a1b6e",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

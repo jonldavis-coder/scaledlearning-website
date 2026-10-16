@@ -212,7 +212,7 @@ textarea{min-height:140px;resize:vertical}
 .site-footer a{color:#fff;text-decoration:none}
 .site-footer a:hover{color:var(--amber)}
 .footer-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:32px}
-.footer-grid h4{color:var(--amber);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
+.footer-grid h4,.footer-grid h3{font-weight:700;color:var(--amber);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
 .footer-grid ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
 .footer-brand .brand{color:#fff}
 .footer-legal{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:22px;font-size:.82rem;color:#a99fd4;display:grid;gap:6px}
@@ -592,3 +592,5 @@ textarea{min-height:140px;resize:vertical}
   .sla-form{padding-bottom:calc(12px + env(safe-area-inset-bottom))}
 }
 @media print{.sla-launch,.sla-panel{display:none!important}}
+
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0}

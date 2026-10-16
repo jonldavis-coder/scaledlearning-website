@@ -1,2 +1,32 @@
+# Welcome: all major search engine crawlers may crawl this site.
 User-agent: *
 Disallow: /dl/
+
+User-agent: Googlebot
+Disallow: /dl/
+
+User-agent: Googlebot-Image
+Disallow: /dl/
+
+User-agent: Bingbot
+Disallow: /dl/
+
+User-agent: DuckDuckBot
+Disallow: /dl/
+
+User-agent: Applebot
+Disallow: /dl/
+
+User-agent: Slurp
+Disallow: /dl/
+
+User-agent: YandexBot
+Disallow: /dl/
+
+User-agent: Baiduspider
+Disallow: /dl/
+
+User-agent: Brave
+Disallow: /dl/
+
+Sitemap: https://scaledlearning.com/sitemap.xml

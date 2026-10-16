@@ -622,3 +622,5 @@ textarea{min-height:140px;resize:vertical}
 .tag.coral{color:#9e2f1c}
 .ribbon{background:#c8432f}
 @media (max-width:900px){.guide-layout{grid-template-columns:1fr}.guide-aside{position:static}.sitemap-list ul{columns:1}}
+/* Perf: skip rendering work for below-the-fold sections until needed */
+main>section:nth-of-type(n+3),.site-footer{content-visibility:auto;contain-intrinsic-size:auto 640px}

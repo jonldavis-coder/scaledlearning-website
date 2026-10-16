@@ -624,3 +624,4 @@ textarea{min-height:140px;resize:vertical}
 @media (max-width:900px){.guide-layout{grid-template-columns:1fr}.guide-aside{position:static}.sitemap-list ul{columns:1}}
 /* Perf: skip rendering work for below-the-fold sections until needed */
 main>section:nth-of-type(n+3){content-visibility:auto;contain-intrinsic-size:auto 640px}
+.card-link{display:inline-block;min-height:24px;line-height:24px}

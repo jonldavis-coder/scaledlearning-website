@@ -335,7 +335,7 @@ textarea{min-height:140px;resize:vertical}
 .checkout-modal code{background:var(--lav);padding:2px 6px;border-radius:6px;font-size:.85rem}
 .buy-options{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 @media (max-width:860px){.buy-options{grid-template-columns:1fr}}
-.book-btns{margin-top:auto;display:flex;flex-wrap:wrap;gap:8px}.book-btns .btn{padding:10px 14px;font-size:.9rem;margin:0}
+.book-btns{margin-top:auto;display:flex;flex-wrap:wrap;gap:12px}.book-btns .btn{min-height:48px;padding:12px 16px;font-size:.9rem;margin:0}
 
 /* Premium book covers */
 :root{--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif}
@@ -458,7 +458,7 @@ textarea{min-height:140px;resize:vertical}
 .book-row-by{font-size:.78rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-d);margin:0 0 14px}
 .book-row-why{background:#fff8e6;border-left:4px solid var(--amber);padding:12px 16px;border-radius:0 10px 10px 0}
 .book-row-why span{display:block;font-size:.75rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#8a5a00;margin-bottom:2px}
-.btn-link{background:none;border:none;color:var(--violet);padding-left:6px;padding-right:6px}
+.btn-link{background:none;border:none;color:var(--violet);padding-left:14px;padding-right:14px}
 @media (max-width:820px){.book-row,.book-row.flip{grid-template-columns:1fr;gap:24px;padding:40px 0}.book-row.flip .book-row-cover{order:0}.book-row-cover{max-width:240px}}
 .res-tile .icon{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--lav);color:var(--violet);margin-bottom:8px}.res-tile .icon svg{width:24px;height:24px}
 /* About page */
@@ -624,4 +624,7 @@ textarea{min-height:140px;resize:vertical}
 @media (max-width:900px){.guide-layout{grid-template-columns:1fr}.guide-aside{position:static}.sitemap-list ul{columns:1}}
 /* Perf: skip rendering work for below-the-fold sections until needed */
 main>section:nth-of-type(n+3){content-visibility:auto;contain-intrinsic-size:auto 640px}
+/* The book shelf is one long run of links. Skipping its layout stacks those
+   link boxes onto the footer and fails the touch-target audit. */
+#buy{content-visibility:visible;contain-intrinsic-size:none}
 .card-link{display:inline-block;min-height:24px;line-height:24px}
